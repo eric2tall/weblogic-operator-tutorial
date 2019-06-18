@@ -24,7 +24,7 @@ build-domain-in-home-image:
                     --build-arg SOURCEIMAGE=$REGION.ocir.io/$TENANCY/$WERCKER_APPLICATION_NAME:latest \
                     --force-rm=true \
                     -t $REGION.ocir.io/$TENANCY/$WERCKER_APPLICATION_NAME:$WERCKER_GIT_COMMIT \
-                    -t $REGION.ocir.io/$TENANCY/$WERCKER_APPLICATION_NAME:latest .
+                    -t $REGION.ocir.io/$TENANCY/$WERCKER_APPLICATION_NAME:latestgreatestalso .
               else
                 docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
                 docker build --file Dockerfile.create \
