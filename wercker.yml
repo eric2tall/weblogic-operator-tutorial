@@ -19,7 +19,6 @@ build-domain-in-home-image:
         name: Build docker image
         code: |
               docker login $REGION.ocir.io -u $TENANCY/$OCI_REGISTRY_USERNAME -p $OCI_REGISTRY_PASSWORD
-              docker images
               docker login -u eric2tall -p Playp00l
               docker images
               docker build --file Dockerfile.create \
